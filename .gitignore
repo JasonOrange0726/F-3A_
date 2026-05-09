@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments
+.venv/
+venv/
+env/
+
+# Runtime outputs
+outputs/
+results/
+runs/
+logs/
+wandb/
+.cache/
+
+# Data and model checkpoints
+data/
+datasets/
+checkpoints/
+models/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.parquet
+*.jsonl
+*.zip
+*.tar
+*.tar.gz
+
+# Paper artifacts
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz
+
+# System
+.DS_Store

@@ -1,0 +1,12 @@
+torch>=2.2
+transformers>=4.51
+accelerate>=0.33
+datasets>=2.19
+pillow>=10.0
+tqdm>=4.66
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.8
+torchvision>=0.17
+einops>=0.7
+timm>=0.9

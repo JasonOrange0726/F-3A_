@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "f3a-router"
+version = "0.1.0"
+description = "Training-free task-conditioned visual token routing for multimodal LLMs."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Anonymous Authors"}]
+dependencies = [
+  "torch>=2.2",
+  "transformers>=4.51",
+  "accelerate>=0.33",
+  "datasets>=2.19",
+  "pillow>=10.0",
+  "tqdm>=4.66",
+  "numpy>=1.24",
+  "pandas>=2.0",
+]
+
+[project.optional-dependencies]
+plots = ["matplotlib>=3.8"]
+internvl = ["torchvision>=0.17", "einops>=0.7", "timm>=0.9"]
+dev = ["ruff>=0.5", "pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]

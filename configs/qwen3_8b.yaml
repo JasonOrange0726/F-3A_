@@ -1,0 +1,34 @@
+model:
+  family: qwen3-vl
+  name: Qwen3-VL-8B-Instruct
+  path: Qwen/Qwen3-VL-8B-Instruct
+  dtype: auto
+  device: cuda:0
+
+routing:
+  mode: foraging
+  keep_ratios: [0.6, 0.4, 0.2]
+  text_conditioning_mode: universal_three_cue
+  router_seed: 42
+  router_heads: 16
+  token_nonzero: 32
+  odor_nonzero: 8
+  head_topk: 4
+  odor_topk: 4
+  local_window_size: 2
+  jump_ratio: 0.15
+
+benchmarks:
+  - hallusionbench
+  - mme
+  - ai2d
+  - realworldqa
+  - scienceqa
+  - pope
+  - mmbench
+  - vsr
+  - visual7w
+
+runtime:
+  max_new_tokens: 16
+  output_root: ${F3A_OUTPUT_ROOT:-outputs}

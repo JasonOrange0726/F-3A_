@@ -1,0 +1,17 @@
+model:
+  family: internvl3.5
+  name: InternVL3.5-8B
+  path: OpenGVLab/InternVL3_5-8B
+  dtype: auto
+  device: cuda:0
+
+routing:
+  mode: foraging
+  keep_ratios: [0.6, 0.4, 0.2]
+  text_conditioning_mode: universal_three_cue
+  router_seed: 42
+
+runtime:
+  max_num_tiles: 12
+  max_new_tokens: 16
+  output_root: ${F3A_OUTPUT_ROOT:-outputs}
